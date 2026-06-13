@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+# get "route" to="controller#methodname"
+  get "about", to:"about#index" 
 end
