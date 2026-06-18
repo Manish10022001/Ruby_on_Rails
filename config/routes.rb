@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   # root "posts#index"
 # get "route" to="controller#methodname"
   get "about", to:"about#index"
+
+  #sign_up route
+  get "sign_up", to:"registrations#new"
+  #user_path requried in signup
+  post "sign_up", to:"registration#create"
   #root route 
   # get "/", to:"main#index" as root route is special route we can directly use
   root to:"main#index"
