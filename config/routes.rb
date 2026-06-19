@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   #sign_up route
   get "sign_up", to:"registrations#new"
   #user_path requried in signup
-  post "sign_up", to:"registration#create"
+  post "sign_up", to:"registrations#create"
   #root route 
   # get "/", to:"main#index" as root route is special route we can directly use
   root to:"main#index"
