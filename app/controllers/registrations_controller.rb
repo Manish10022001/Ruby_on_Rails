@@ -13,6 +13,8 @@ class RegistrationsController <ApplicationController
        # @user = User.new(params[:user]) this also works but it is not secure so, we use helper method as private
        @user = User.new(user_params)
        if @user.save
+        # cookies[:user_id]
+        session[:user_id] = @user.id #store in session cookies
         redirect_to root_path, notice:"Successfully created account"
        else
         render :new
