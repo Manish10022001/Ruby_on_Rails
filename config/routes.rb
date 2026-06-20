@@ -21,6 +21,11 @@ Rails.application.routes.draw do
 
   #for logout 
   delete "logout", to:"session#destroy"
+
+  #for login
+  get "sign_in", to:"session#new"
+  post "sign_in", to:"session#create"
+
   #root route 
   # get "/", to:"main#index" as root route is special route we can directly use
   root to:"main#index"
