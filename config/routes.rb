@@ -26,6 +26,9 @@ Rails.application.routes.draw do
   get "sign_in", to:"session#new"
   post "sign_in", to:"session#create"
 
+  # for edit password
+  get "password", to:"passwords#edit", as: :edit_password
+  patch "password", to:"passwords#update"
   #root route 
   # get "/", to:"main#index" as root route is special route we can directly use
   root to:"main#index"
