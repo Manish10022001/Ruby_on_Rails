@@ -6,7 +6,7 @@ class PasswordResetController <ApplicationController
         @user = User.find_by(email: params[:email])
         # if found send email, and redirect to root path
         
-        if @User.present?
+        if @user.present?
             #Send mail
             PasswordMailer.with(user: @user).reset.deliver_now
         end
