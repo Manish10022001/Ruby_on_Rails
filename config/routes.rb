@@ -29,6 +29,11 @@ Rails.application.routes.draw do
   # for edit password
   get "password", to:"passwords#edit", as: :edit_password
   patch "password", to:"passwords#update"
+
+  #forgot password
+  get "password/reset", to:"password_reset#new"
+  post "password/reset", to:"password_reset#create"
+  
   #root route 
   # get "/", to:"main#index" as root route is special route we can directly use
   root to:"main#index"
